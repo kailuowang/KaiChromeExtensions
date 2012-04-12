@@ -4,7 +4,7 @@ retrieveUrl = function(opts) {
   if (opts == null) {
     opts = {};
   }
-  _.defaults(object, {
+  _.defaults(opts, {
     version: "medium",
     lineBetween: 4
   });
