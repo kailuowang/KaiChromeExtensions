@@ -14,7 +14,7 @@ retrieveUrl = function(opts) {
   picUrls = _($(selector)).map(function(pic) {
     return pic.src.replace("_s.", "_" + versionCode + ".");
   });
-  picUrls = _(picUrls).select(function(url) {
+  picUrls = _(picUrls).filter(function(url) {
     return url.substr(-4) === ".jpg";
   });
   index = 1;
