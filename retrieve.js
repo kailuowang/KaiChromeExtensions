@@ -5,17 +5,20 @@ function retrieveUrl(){
   });
   var index = 1;
   var linesBetween = 4;
+  var output = [];
   _(picUrls).each( function(url) { 
-    console.info(index);
-    console.info(url);
-    printBlankLines(linesBetween);
+    output.push(index);
+    output.push(url);
+    printBlankLines(linesBetween, output);
     index++;
   });
+  return output.join("\n")
+  
 }
 
-function printBlankLines(lines){
+function printBlankLines(lines, output){
   _(_.range(lines)).each(function(line){
     var spaces = _.range(line).map(function(){ return " "; }).join('');
-    console.info(spaces);
+    output.push(spaces);
   });
 }
