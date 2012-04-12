@@ -6,10 +6,16 @@ function retrieveUrl(){
   var index = 1;
   var linesBetween = 4;
   _(picUrls).each( function(url) { 
-  	console.log(index);
+     console.log(index);
   	console.log(url);
-  	_(linesBetween).times(function(){ console.log(' ' ); });
-  	index++;
+    printBlankLines(lines);
+    index++;
   });
-  
+}
+
+function printBlankLines(lines){
+  _(_.range(lines)).each(function(line){
+    var spaces = _.range(line).map(function(){ return " "; }).join('');
+    console.log(spaces);
+  });
 }
