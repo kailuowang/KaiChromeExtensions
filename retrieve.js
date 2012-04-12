@@ -6,8 +6,8 @@ function retrieveUrl(){
   var index = 1;
   var linesBetween = 4;
   _(picUrls).each( function(url) { 
-     console.log(index);
-  	console.log(url);
+     console.writeline(index);
+  	console.info(url);
     printBlankLines(linesBetween);
     index++;
   });
@@ -16,6 +16,6 @@ function retrieveUrl(){
 function printBlankLines(lines){
   _(_.range(lines)).each(function(line){
     var spaces = _.range(line).map(function(){ return " "; }).join('');
-    console.log(spaces);
+    console.info(spaces);
   });
 }
