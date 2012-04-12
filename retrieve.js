@@ -1,19 +1,20 @@
-var retrieveUrl;
 retrieveUrl = function(opts) {
-  var index, output, picUrls, versionCode;
+  var index, output, picUrls, selector, versionCode;
   if (opts == null) {
     opts = {};
   }
   _.defaults(opts, {
     version: "medium",
-    linesBetween: 4
+    linesBetween: 4,
+    context: 'set'
   });
   versionCode = opts.version === "medium" ? "z" : "b";
-  picUrls = _($(".rapidnofollow .pc_img")).map(function(pic) {
+  selector = context === 'set' ? '.rapidnofollow .pc_img' : '.batch_photo_img_div img';
+  picUrls = _($(selector)).map(function(pic) {
     return pic.src.replace("_s.", "_" + versionCode + ".");
   });
   index = 1;
-  output = [];
+  output = [''];
   _(picUrls).each(function(url) {
     output.push(index);
     output.push(url);
