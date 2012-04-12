@@ -1,6 +1,6 @@
 function loadScript(sScriptSrc) {
-  var oHead = document.getElementById('head');
-  var oScript = document.getElementsByTagName('head')[0];
+  var oHead = document.getElementsByTagName('head')[0];
+  var oScript = document.createElement('script'); 
   oScript.type = 'text/javascript';
   oScript.src = sScriptSrc;
   oHead.appendChild(oScript);
