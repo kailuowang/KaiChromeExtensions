@@ -1,3 +1,4 @@
+var retrieveUrl;
 retrieveUrl = function(opts) {
   var index, output, picUrls, selector, versionCode;
   if (opts == null) {
@@ -12,6 +13,9 @@ retrieveUrl = function(opts) {
   selector = opts.context === 'set' ? '.rapidnofollow .pc_img' : '.batch_photo_img_div img';
   picUrls = _($(selector)).map(function(pic) {
     return pic.src.replace("_s.", "_" + versionCode + ".");
+  });
+  picUrls = _(picUrls).select(function(url) {
+    return url.substr(-4) === ".jpg";
   });
   index = 1;
   output = [''];
