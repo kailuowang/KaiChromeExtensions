@@ -8,7 +8,7 @@ function retrieveUrl(){
   _(picUrls).each( function(url) { 
      console.log(index);
   	console.log(url);
-    printBlankLines(lines);
+    printBlankLines(linesBetween);
     index++;
   });
 }
