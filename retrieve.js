@@ -9,7 +9,7 @@ retrieveUrl = function(opts) {
     context: 'set'
   });
   versionCode = opts.version === "medium" ? "z" : "b";
-  selector = context === 'set' ? '.rapidnofollow .pc_img' : '.batch_photo_img_div img';
+  selector = opts.context === 'set' ? '.rapidnofollow .pc_img' : '.batch_photo_img_div img';
   picUrls = _($(selector)).map(function(pic) {
     return pic.src.replace("_s.", "_" + versionCode + ".");
   });
