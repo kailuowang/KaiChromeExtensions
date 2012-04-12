@@ -8,7 +8,7 @@ retrieveUrl = function(opts) {
     version: "medium",
     linesBetween: 4,
     context: 'set',
-    hasIndex: true
+    displayIndex: true
   });
   versionCode = opts.version === "medium" ? "z" : "b";
   selector = opts.context === 'set' ? '.rapidnofollow .pc_img' : '.batch_photo_img_div img';
@@ -21,7 +21,7 @@ retrieveUrl = function(opts) {
   index = 1;
   output = [''];
   _(picUrls).each(function(url) {
-    if (opts.hasIndex) {
+    if (opts.displayIndex) {
       output.push(index);
     }
     output.push(url);
