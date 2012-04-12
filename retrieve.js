@@ -6,7 +6,7 @@ function retrieveUrl(){
   var index = 1;
   var linesBetween = 4;
   _(picUrls).each( function(url) { 
-     console.info(index);
+    console.info(index);
   	console.info(url);
     printBlankLines(linesBetween);
     index++;
