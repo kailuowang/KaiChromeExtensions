@@ -1,9 +1,9 @@
 function loadScript(sScriptSrc) {
   var oHead = document.getElementById('head');
-	var oScript = document.createElement('script');
-	oScript.type = 'text/javascript';
-	oScript.src = sScriptSrc;
-	oHead.appendChild(oScript);
+  var oScript = document.createElement('script');
+  oScript.type = 'text/javascript';
+  oScript.src = sScriptSrc;
+  oHead.appendChild(oScript);
 } 
 loadScript('http://code.jquery.com/jquery-1.7.2.min.js');
 loadScript('http://documentcloud.github.com/underscore/underscore-min.js');
