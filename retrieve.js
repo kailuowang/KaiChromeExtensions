@@ -6,7 +6,7 @@ retrieveUrl = function(opts) {
   }
   _.defaults(opts, {
     version: "medium",
-    lineBetween: 4
+    linesBetween: 4
   });
   versionCode = opts.version === "medium" ? "z" : "b";
   picUrls = _($(".rapidnofollow .pc_img")).map(function(pic) {
