@@ -26,3 +26,21 @@ retrieveUrl = (opts = {})->
     index++
 
   output.join "\n"
+
+
+#on klekr
+index = 1
+for picture in gallery.pictures
+  console.log(index)
+  console.log
+  console.log picture.largeUrl
+  console.log picture.ownerName
+  console.log picture.title
+  console.log picture.description
+  console.log picture.flickrPageUrl
+  console.log "    "
+  console.log "      "
+  console.log " "
+  console.log "       "
+  index += 1
+
