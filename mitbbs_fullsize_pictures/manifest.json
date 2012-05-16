@@ -1,0 +1,18 @@
+{
+  "name": "Mitbbs Full-size Picture Extension",
+  "version": "0.0.1",
+  "manifest_version": 2,
+
+  "description": "show full size pictures in mitbbs",
+  "icons": { "default_icon": "icon.png" },
+  "permissions": [
+    "tabs", "http://www.mitbbs.com/*", "http://mitbbs.com/*"
+  ],
+
+  "background": { "scripts": ["background.js"] },
+  "browser_action": {
+    "name": "show full size pictures",
+    "default_icon": "icon.png"
+  }
+
+}
