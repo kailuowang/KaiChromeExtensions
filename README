@@ -7,4 +7,4 @@ function loadScript(sScriptSrc) {
 } 
 loadScript('http://code.jquery.com/jquery-1.7.2.min.js');
 loadScript('http://documentcloud.github.com/underscore/underscore-min.js');
-loadScript('https://raw.github.com/kailuowang/flickr-url/master/retrieve.js');
+loadScript('https://github.com/kailuowang/KaiChromeExtensions/raw/master/retrieve.js');
